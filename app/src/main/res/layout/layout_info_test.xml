@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cdrLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/topHeader"
+            android:layout_width="match_parent"
+            android:layout_height="184dp"
+            android:background="@color/colorPrimary">
+
+            <ImageButton
+                android:id="@+id/backArrow"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/keyboard_backspace"
+                android:layout_margin="@dimen/inner_margin"
+                android:background="@drawable/image_button_states"
+                android:clickable="true"/>
+
+            <ImageButton
+                android:id="@+id/deleteIB"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/delete"
+                android:layout_margin="@dimen/inner_margin"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/image_button_states"
+                android:clickable="true"
+                />
+
+            <TextView
+                android:id="@+id/personNameTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="8dp"
+                android:padding="8dp"
+                android:text="Name"
+                android:textColor="@android:color/white"
+                android:textSize="32sp" />
+        </RelativeLayout>
+
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <RelativeLayout
+                android:id="@+id/personalInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:paddingBottom="@dimen/inner_margin">
+
+                <TextView
+                    android:id="@+id/personalInfoTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/inner_margin"
+                    android:text="Personal Info"
+                    android:textColor="@color/top_label_color"
+                    android:textSize="@dimen/label_size" />
+
+                <RelativeLayout
+                    android:id="@+id/dobContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/personalInfoTag"
+                    android:layout_marginLeft="@dimen/inner_margin"
+                    android:padding="@dimen/layout_text_view_padding">
+
+                    <TextView
+                        android:id="@+id/dOBTag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="DOB:"
+                        android:textColor="@color/label_color"
+                        android:textSize="@dimen/add_activity_textSize" />
+
+
+                    <TextView
+                        android:id="@+id/dOBTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_toRightOf="@+id/dOBTag"
+                        android:text="DOB"
+                        android:textSize="@dimen/add_activity_textSize" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/fatherNameContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/dobContainer"
+                    android:layout_marginLeft="@dimen/inner_margin"
+                    android:padding="@dimen/layout_text_view_padding">
+
+                    <TextView
+                        android:id="@+id/fatherNameTag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Father's Name:"
+                        android:textColor="@color/label_color"
+                        android:textSize="@dimen/add_activity_textSize" />
+
+
+                    <TextView
+                        android:id="@+id/fatherNameTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_toRightOf="@+id/fatherNameTag"
+                        android:text="Father's Name"
+                        android:textSize="@dimen/add_activity_textSize" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/grandFatherContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/fatherNameContainer"
+                    android:layout_marginLeft="@dimen/inner_margin"
+                    android:padding="@dimen/layout_text_view_padding">
+
+                    <TextView
+                        android:id="@+id/grandFatherTag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Grandfather's Name:"
+                        android:textColor="@color/label_color"
+                        android:textSize="@dimen/add_activity_textSize" />
+
+
+                    <TextView
+                        android:id="@+id/grandFatherTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_toRightOf="@+id/grandFatherTag"
+                        android:text="GFather's Name"
+                        android:textSize="@dimen/add_activity_textSize" />
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/addressTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/grandFatherContainer"
+                    android:layout_margin="@dimen/inner_margin"
+                    android:text="Address"
+                    android:textColor="@color/top_label_color"
+                    android:textSize="@dimen/label_size" />
+
+                <RelativeLayout
+                    android:id="@+id/permanentAddContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/addressTag"
+                    android:layout_marginLeft="@dimen/inner_margin"
+                    android:padding="@dimen/layout_text_view_padding">
+
+                    <TextView
+                        android:id="@+id/permanentAddTag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Permanent:"
+                        android:textColor="@color/label_color"
+                        android:textSize="@dimen/add_activity_textSize" />
+
+
+                    <TextView
+                        android:id="@+id/permanentAddTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_toRightOf="@+id/permanentAddTag"
+                        android:text="permanent"
+                        android:textSize="@dimen/add_activity_textSize" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/currentAddContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/permanentAddContainer"
+                    android:layout_marginLeft="@dimen/inner_margin"
+                    android:padding="@dimen/layout_text_view_padding">
+
+                    <TextView
+                        android:id="@+id/currentAddTag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Temporary:"
+                        android:textColor="@color/label_color"
+                        android:textSize="@dimen/add_activity_textSize" />
+
+
+                    <TextView
+                        android:id="@+id/currentAddTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_toRightOf="@+id/currentAddTag"
+                        android:text="Temporary"
+                        android:textSize="@dimen/add_activity_textSize" />
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/citizenTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/currentAddContainer"
+                    android:layout_margin="@dimen/inner_margin"
+                    android:text="Citizenship"
+                    android:textColor="@color/top_label_color"
+                    android:textSize="@dimen/label_size" />
+
+
+                <RelativeLayout
+                    android:id="@+id/citizenNoContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/citizenTag"
+                    android:layout_marginLeft="@dimen/inner_margin"
+                    android:padding="@dimen/layout_text_view_padding">
+
+                    <TextView
+                        android:id="@+id/citizenNoTag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Number:"
+                        android:textColor="@color/label_color"
+                        android:textSize="@dimen/add_activity_textSize" />
+
+
+                    <TextView
+                        android:id="@+id/citizenNoTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_toRightOf="@+id/citizenNoTag"
+                        android:text="citizen No"
+                        android:textSize="@dimen/add_activity_textSize" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/citizenIssueDateContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/citizenNoContainer"
+                    android:layout_marginLeft="@dimen/inner_margin"
+                    android:padding="@dimen/layout_text_view_padding">
+
+                    <TextView
+                        android:id="@+id/citizenIssueDateTag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Issue Date:"
+                        android:textColor="@color/label_color"
+                        android:textSize="@dimen/add_activity_textSize" />
+
+
+                    <TextView
+                        android:id="@+id/citizenIssueDateTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_toRightOf="@+id/citizenIssueDateTag"
+                        android:text="Issue Date"
+                        android:textSize="@dimen/add_activity_textSize" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/citizenIssuePlaceContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/citizenIssueDateContainer"
+                    android:layout_marginLeft="@dimen/inner_margin"
+                    android:padding="@dimen/layout_text_view_padding">
+
+                    <TextView
+                        android:id="@+id/citizenIssuePlaceTag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Issue Place:"
+                        android:textColor="@color/label_color"
+                        android:textSize="@dimen/add_activity_textSize" />
+
+
+                    <TextView
+                        android:id="@+id/citizenIssuePlaceTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_toRightOf="@+id/citizenIssuePlaceTag"
+                        android:text="Issue Place"
+                        android:textSize="@dimen/add_activity_textSize" />
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/officialTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/citizenIssuePlaceContainer"
+                    android:layout_margin="@dimen/inner_margin"
+                    android:text="Official Information"
+                    android:textColor="@color/top_label_color"
+                    android:textSize="@dimen/label_size" />
+
+                <RelativeLayout
+                    android:id="@+id/bankNameContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/officialTag"
+                    android:layout_marginLeft="@dimen/inner_margin"
+                    android:padding="@dimen/layout_text_view_padding">
+
+                    <TextView
+                        android:id="@+id/bankNameTag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bank Name:"
+                        android:textColor="@color/label_color"
+                        android:textSize="@dimen/add_activity_textSize" />
+
+
+                    <TextView
+                        android:id="@+id/bankNameTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_toRightOf="@+id/bankNameTag"
+                        android:text="bank name"
+                        android:textSize="@dimen/add_activity_textSize" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/accNumberContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/bankNameContainer"
+                    android:layout_marginLeft="@dimen/inner_margin"
+                    android:padding="@dimen/layout_text_view_padding">
+
+                    <TextView
+                        android:id="@+id/accNumberTag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Acc Number:"
+                        android:textColor="@color/label_color"
+                        android:textSize="@dimen/add_activity_textSize" />
+
+
+                    <TextView
+                        android:id="@+id/accNumberTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_toRightOf="@+id/accNumberTag"
+                        android:text="acc number"
+                        android:textSize="@dimen/add_activity_textSize" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/dpIDContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/accNumberContainer"
+                    android:layout_marginLeft="@dimen/inner_margin"
+                    android:padding="@dimen/layout_text_view_padding">
+
+                    <TextView
+                        android:id="@+id/dpIDTag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="DP ID:"
+                        android:textColor="@color/label_color"
+                        android:textSize="@dimen/add_activity_textSize" />
+
+
+                    <TextView
+                        android:id="@+id/dpIDTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_toRightOf="@+id/dpIDTag"
+                        android:text="dp id"
+                        android:textSize="@dimen/add_activity_textSize" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/clientIDContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/dpIDContainer"
+                    android:layout_marginLeft="@dimen/inner_margin"
+                    android:padding="@dimen/layout_text_view_padding">
+
+                    <TextView
+                        android:id="@+id/clientIDTag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Client ID:"
+                        android:textColor="@color/label_color"
+                        android:textSize="@dimen/add_activity_textSize" />
+
+
+                    <TextView
+                        android:id="@+id/clientIDTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_toRightOf="@+id/clientIDTag"
+                        android:text="Client ID"
+                        android:textSize="@dimen/add_activity_textSize" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/passwordContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/clientIDContainer"
+                    android:layout_marginLeft="@dimen/inner_margin"
+                    android:padding="@dimen/layout_text_view_padding">
+
+                    <TextView
+                        android:id="@+id/passwordTag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Password:"
+                        android:textColor="@color/label_color"
+                        android:textSize="@dimen/add_activity_textSize" />
+
+
+                    <TextView
+                        android:id="@+id/onlinePWDTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_toRightOf="@+id/passwordTag"
+                        android:text="Password"
+                        android:textSize="@dimen/add_activity_textSize" />
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/editFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        android:clickable="true"
+        android:src="@drawable/pencil"
+        app:layout_anchor="@id/topHeader"
+        app:layout_anchorGravity="right|bottom" />
+</android.support.design.widget.CoordinatorLayout>

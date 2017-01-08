@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/textHolder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/personNameTV"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:text="Person Name"
+                android:textSize="32sp" />
+
+            <TextView
+                android:id="@+id/dOBTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DOB"
+                android:textSize="@dimen/add_activity_textSize" />
+
+
+            <TextView
+                android:id="@+id/citizenNoTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Citizenship Number"
+                android:textSize="@dimen/add_activity_textSize" />
+
+            <TextView
+                android:id="@+id/citizenIssueDateTV"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/add_activity_text_view_height"
+                android:text="Issue Date"
+                android:textSize="@dimen/add_activity_textSize" />
+
+            <TextView
+                android:id="@+id/citizenIssuePlaceTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Issue Place"
+                android:textSize="@dimen/add_activity_textSize" />
+
+            <TextView
+                android:id="@+id/bankNameTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bank Name"
+                android:textSize="@dimen/add_activity_textSize" />
+
+            <TextView
+                android:id="@+id/accNumberTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Acc Number"
+                android:textSize="@dimen/add_activity_textSize" />
+
+            <TextView
+                android:id="@+id/fatherNameTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Father Name"
+                android:textSize="@dimen/add_activity_textSize" />
+
+            <TextView
+                android:id="@+id/grandFatherTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Grand Father"
+                android:textSize="@dimen/add_activity_textSize" />
+
+            <TextView
+                android:id="@+id/dpIDTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DP_ID"
+                android:textSize="@dimen/add_activity_textSize" />
+
+            <TextView
+                android:id="@+id/clientIDTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Client Id"
+                android:textSize="@dimen/add_activity_textSize" />
+
+            <TextView
+                android:id="@+id/permanentAddTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Permanent Address"
+                android:textSize="@dimen/add_activity_textSize" />
+
+            <TextView
+                android:id="@+id/currentAddTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Current Address"
+                android:textSize="@dimen/add_activity_textSize" />
+
+            <TextView
+                android:id="@+id/onlinePWDTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="online password"
+                android:textSize="@dimen/add_activity_textSize" />
+
+<!--            <Button
+                android:id="@+id/deleteButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:background="@color/colorPrimary"
+                android:text="Delete"
+                android:textColor="@android:color/white" />-->
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
