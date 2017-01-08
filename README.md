@@ -1,0 +1,2 @@
+# androidInfo
+Test android project
